@@ -1,20 +1,12 @@
-valid=['0','1','2','5','6','8','9']
 n=int(input())
-l=[]
-x=1
-y=1
-while(y<=n):
-    str1=str(x)
-    c=0
-    for i in str1:
-        if(i in valid):
-            c+=1
-    if(c==len(str1)):
-        l.append(str1)
-        y+=1
-    x+=1
-f=l[len(l)-1]
-f=int(f)
-print(f)
+l=['0','1','2','5','6','8','9']
+x=len(l)
+i=0
+s=""
+while n>0:
+    s=s+l[n%x]
+    n//=x
+s=s[::-1]
+print(int(s))
 
 
